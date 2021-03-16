@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<form class=" form-group">
+    <div class="row p-5">
+        <div class="col-sm-6">
+            <h2 class="display-1">{{ pet.name }}</h2>
+            <p>Species: {{ pet.species }}</p>
+            <p>Age: {{ pet.age }}</p>
+            <p>Details:</p>
+            <p> {{ pet.notes }}</p>
+            <button class = "btn btn-primary" type="submit"  formmethod="POST" formaction="/edit/{{pet.id}}">Edit Pet</button>
+        </div>
+        <div class="col-sm-6">
+            <img class="img-fluid m-5" src="{{ pet.photo_url}}" alt="picture of {{ pet.name }} the {{ pet.species }}" >
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
