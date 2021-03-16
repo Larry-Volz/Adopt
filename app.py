@@ -64,11 +64,11 @@ def edit_pet(pet_id):
         # db.session.add(pet)
         db.session.commit()
 
-        flash(f"Successfully edited {name}")
+        flash(f"Successfully edited {pet.name}")
         return redirect('/')
 
     else:
-        return render_template("edit_pet.html", form=form)
+        return render_template("edit_pet.html", form=form, pet=pet)
 
 
 

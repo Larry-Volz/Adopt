@@ -2,7 +2,7 @@
 {% block content %}
 <div class="col-md-8">
     <h2 class="display-1 ml-5"><strong>Edit a Pet's Details</strong></h2>
-    <form action="/add" method="POST">
+    <form action="/edit/{{pet.id}}" method="POST">
         {{ form.hidden_tag() }}
 
         {% for field in form if field.widget.input_type != 'hidden' %}
